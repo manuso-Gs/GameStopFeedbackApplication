@@ -1,0 +1,44 @@
+﻿@model GameStopFeedbackApplication.Models.Feedback
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Feedback</h2>
+
+@using (Html.BeginForm("Submit", "Survey"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.User.Name)
+        @Html.TextBoxFor(m => m.User.Name, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.User.EmailAddress)
+        @Html.TextBoxFor(m => m.User.EmailAddress, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.User.Age)
+        @Html.TextBoxFor(m => m.User.Age, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label for="LookingFor">Where you able to find what you were looking for?</label>
+        @Html.DropDownListFor(m => m.LookingFor, new SelectList(Model.Value), "", new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label for="ProductRange">Range of products available</label>
+        @Html.DropDownListFor(m => m.ProductRange, new SelectList(Model.Value), "", new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label for="CheckoutEasy">How easy was it to checkout?</label>
+        @Html.DropDownListFor(m => m.CheckoutEasy, new SelectList(Model.Value), "", new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+}
+

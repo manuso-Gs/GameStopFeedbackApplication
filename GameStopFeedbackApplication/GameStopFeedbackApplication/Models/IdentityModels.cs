@@ -20,6 +20,9 @@ namespace GameStopFeedbackApplication.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+
+        public DbSet<Users> Users { get; set; }
+        public DbSet<Feedback> Feedback { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
