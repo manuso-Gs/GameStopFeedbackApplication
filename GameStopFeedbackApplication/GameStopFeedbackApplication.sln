@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameStopFeedbackApplication", "GameStopFeedbackApplication\GameStopFeedbackApplication.csproj", "{2D0D97A8-4A0C-4DC9-A32B-A764E5107734}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D0D97A8-4A0C-4DC9-A32B-A764E5107734}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D0D97A8-4A0C-4DC9-A32B-A764E5107734}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D0D97A8-4A0C-4DC9-A32B-A764E5107734}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D0D97A8-4A0C-4DC9-A32B-A764E5107734}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1A110C09-4CEF-4B16-B5AB-60CC5C51CBAB}
+	EndGlobalSection
+EndGlobal
