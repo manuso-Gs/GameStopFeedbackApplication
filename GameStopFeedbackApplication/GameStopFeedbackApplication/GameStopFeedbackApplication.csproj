@@ -219,6 +219,10 @@
     <Compile Include="Migrations\201806252100295_ChangeGenderType.Designer.cs">
       <DependentUpon>201806252100295_ChangeGenderType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806261543148_validationChanges.cs" />
+    <Compile Include="Migrations\201806261543148_validationChanges.Designer.cs">
+      <DependentUpon>201806261543148_validationChanges.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Feedback.cs" />
@@ -322,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806252100295_ChangeGenderType.resx">
       <DependentUpon>201806252100295_ChangeGenderType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806261543148_validationChanges.resx">
+      <DependentUpon>201806261543148_validationChanges.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
