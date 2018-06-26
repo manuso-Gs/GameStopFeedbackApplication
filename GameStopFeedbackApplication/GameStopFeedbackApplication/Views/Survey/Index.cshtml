@@ -24,6 +24,18 @@
     </div>
 
     <div class="form-group">
+        @Html.LabelFor(m => m.User.Gender)
+        <label class="radio-inline">
+            @Html.RadioButtonFor(m => m.User.Gender, "Male", new { @class = "radio" })
+            Male
+        </label>
+        <label class="radio-inline">
+            @Html.RadioButtonFor(m => m.User.Gender, "Female", new { @class = "radio" })
+            Female
+        </label>
+    </div>
+
+    <div class="form-group">
         <label for="LookingFor">Where you able to find what you were looking for?</label>
         @Html.DropDownListFor(m => m.LookingFor, new SelectList(Model.Value), "", new { @class = "form-control" })
     </div>
@@ -37,6 +49,28 @@
         <label for="CheckoutEasy">How easy was it to checkout?</label>
         @Html.DropDownListFor(m => m.CheckoutEasy, new SelectList(Model.Value), "", new { @class = "form-control" })
     </div>
+
+    <div class="form-group">
+        <label for="OverallExperience">How was your overall experience?</label>
+        @Html.DropDownListFor(m => m.OverallExperience, new SelectList(Model.Value), "", new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label for="MostLiked">What did you like the most?</label>
+        @Html.TextBoxFor(m => m.MostLiked, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label for="MostDisliked">What did you dislike the most?</label>
+        @Html.TextBoxFor(m => m.MostDisliked, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label for="MostLikedToSee">What would you most like to see?</label>
+        @Html.TextBoxFor(m => m.MostLikeToSee, new { @class = "form-control" })
+    </div>
+
+
 
     <button type="submit" class="btn btn-primary">Submit</button>
 

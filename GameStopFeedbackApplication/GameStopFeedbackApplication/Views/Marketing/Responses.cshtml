@@ -1,0 +1,28 @@
+﻿@model IEnumerable<GameStopFeedbackApplication.Models.Feedback>
+@{
+    ViewBag.Title = "Responses";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Responses</h2>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>User Id</th>
+            <th>What did you like the most?</th>
+            <th>What did you dislike the most?</th>
+            <th>What would you most like to see?</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.UserId</td>
+                <td> @item.MostLiked</td>
+                <td> @item.MostDisliked</td>
+                <td> @item.MostLikeToSee</td>
+            </tr>
+        }
+    </tbody>
+</table>

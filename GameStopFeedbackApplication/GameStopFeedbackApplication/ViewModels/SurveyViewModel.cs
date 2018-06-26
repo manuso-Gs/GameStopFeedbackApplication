@@ -8,7 +8,7 @@ namespace GameStopFeedbackApplication.ViewModels
 {
     public class SurveyViewModel
     {
-        public Users User { get; set; }
-        public Feedback Feedback { get; set; }
+        public List<Users> Users { get; set; }
+        public List<Feedback> Feedback { get; set; }
     }
 }

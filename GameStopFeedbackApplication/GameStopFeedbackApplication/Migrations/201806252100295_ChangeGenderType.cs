@@ -1,0 +1,18 @@
+namespace GameStopFeedbackApplication.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class ChangeGenderType : DbMigration
+    {
+        public override void Up()
+        {
+            AlterColumn("dbo.Users", "Gender", c => c.String());
+        }
+        
+        public override void Down()
+        {
+            AlterColumn("dbo.Users", "Gender", c => c.Boolean(nullable: false));
+        }
+    }
+}

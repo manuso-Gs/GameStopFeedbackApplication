@@ -11,7 +11,7 @@ namespace GameStopFeedbackApplication.Models
         public string Name { get; set; }
         public string EmailAddress { get; set; }
         public byte Age { get; set; }
-        public bool Gender { get; set; }
+        public string Gender { get; set; }
 
     }
 }

@@ -1,0 +1,56 @@
+﻿@model GameStopFeedbackApplication.Models.Report
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Reports</h2>
+
+<table id="reports-age" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Average age of responders</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td>@Model.AvgUserAge</td>
+            </tr>
+    </tbody>
+</table>
+
+<h3>Average Responses</h3>
+<table id="reports-four-scales" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Were you able to find what you were looking for?</th>
+            <th>Range of products available</th>
+            <th>How easy was it to checkout?</th>
+            <th>Overall Experience rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.AvgLookingFor</td>
+            <td>@Model.AvgRange</td>
+            <td>@Model.AvgCheckoutEasy</td>
+            <td>@Model.AvgOverallExp</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Gender Distribution</h3>
+<table id="reports-gender" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Male</th>
+            <th>Female</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.Male</td>
+            <td>@Model.Female</td>
+        </tr>
+    </tbody>
+</table>

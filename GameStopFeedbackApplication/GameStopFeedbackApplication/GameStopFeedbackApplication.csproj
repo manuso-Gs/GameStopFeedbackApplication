@@ -198,6 +198,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MarketingController.cs" />
     <Compile Include="Controllers\SurveyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -214,11 +215,16 @@
     <Compile Include="Migrations\201806251457540_AddUserRef2.Designer.cs">
       <DependentUpon>201806251457540_AddUserRef2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806252100295_ChangeGenderType.cs" />
+    <Compile Include="Migrations\201806252100295_ChangeGenderType.Designer.cs">
+      <DependentUpon>201806252100295_ChangeGenderType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Feedback.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Report.cs" />
     <Compile Include="Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -284,6 +290,9 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Survey\Index.cshtml" />
+    <Content Include="Views\Survey\ThankYou.cshtml" />
+    <Content Include="Views\Marketing\Report.cshtml" />
+    <Content Include="Views\Marketing\Responses.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -310,6 +319,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806251457540_AddUserRef2.resx">
       <DependentUpon>201806251457540_AddUserRef2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806252100295_ChangeGenderType.resx">
+      <DependentUpon>201806252100295_ChangeGenderType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

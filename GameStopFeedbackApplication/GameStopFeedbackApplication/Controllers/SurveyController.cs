@@ -31,7 +31,11 @@ namespace GameStopFeedbackApplication.Controllers
         [HttpPost]
         public ActionResult Submit(Feedback questions)
         {
-            return View();
+            _context.Feedback.Add(questions);
+            _context.SaveChanges();
+
+            //return to homepage when new 
+            return View("ThankYou");
         }
 
     }
