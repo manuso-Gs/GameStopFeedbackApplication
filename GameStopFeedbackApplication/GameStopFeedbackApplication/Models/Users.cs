@@ -13,7 +13,7 @@ namespace GameStopFeedbackApplication.Models
         [StringLength(70)]
         public string Name { get; set; }
         [Required]
-        [StringLength(255)]
+        [EmailAddress]
         public string EmailAddress { get; set; }
         [Required]
         public byte Age { get; set; }

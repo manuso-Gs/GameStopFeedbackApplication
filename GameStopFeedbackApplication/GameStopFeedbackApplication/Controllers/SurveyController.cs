@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using GameStopFeedbackApplication.Models;
+using GameStopFeedbackApplication.ViewModels;
 
 namespace GameStopFeedbackApplication.Controllers
 {
@@ -31,11 +32,19 @@ namespace GameStopFeedbackApplication.Controllers
         [HttpPost]
         public ActionResult Submit(Feedback questions)
         {
-            _context.Feedback.Add(questions);
-            _context.SaveChanges();
 
-            //return to homepage when new 
-            return View("ThankYou");
+            if (!ModelState.IsValid)
+            {
+                var view = questions;
+
+                return View("Index", view);
+            }
+            else
+            { 
+                _context.Feedback.Add(questions);
+                _context.SaveChanges();
+                return View("ThankYou");
+            }
         }
 
     }

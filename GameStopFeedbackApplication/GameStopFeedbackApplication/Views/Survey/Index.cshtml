@@ -11,16 +11,19 @@
     <div class="form-group">
         @Html.LabelFor(m => m.User.Name)
         @Html.TextBoxFor(m => m.User.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.User.Name)
     </div>
 
     <div class="form-group">
         @Html.LabelFor(m => m.User.EmailAddress)
         @Html.TextBoxFor(m => m.User.EmailAddress, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.User.EmailAddress)
     </div>
 
     <div class="form-group">
         @Html.LabelFor(m => m.User.Age)
         @Html.TextBoxFor(m => m.User.Age, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.User.Age)
     </div>
 
     <div class="form-group">
@@ -33,41 +36,49 @@
             @Html.RadioButtonFor(m => m.User.Gender, "Female", new { @class = "radio" })
             Female
         </label>
+        @Html.ValidationMessageFor(m => m.User.Gender)
     </div>
 
     <div class="form-group">
         <label for="LookingFor">Where you able to find what you were looking for?</label>
         @Html.DropDownListFor(m => m.LookingFor, new SelectList(Model.Value), "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.LookingFor)
     </div>
 
     <div class="form-group">
         <label for="ProductRange">Range of products available</label>
         @Html.DropDownListFor(m => m.ProductRange, new SelectList(Model.Value), "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.ProductRange)
     </div>
 
     <div class="form-group">
         <label for="CheckoutEasy">How easy was it to checkout?</label>
         @Html.DropDownListFor(m => m.CheckoutEasy, new SelectList(Model.Value), "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.CheckoutEasy)
     </div>
 
     <div class="form-group">
         <label for="OverallExperience">How was your overall experience?</label>
         @Html.DropDownListFor(m => m.OverallExperience, new SelectList(Model.Value), "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.OverallExperience)
     </div>
 
     <div class="form-group">
         <label for="MostLiked">What did you like the most?</label>
         @Html.TextBoxFor(m => m.MostLiked, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MostLiked)
     </div>
 
     <div class="form-group">
         <label for="MostDisliked">What did you dislike the most?</label>
         @Html.TextBoxFor(m => m.MostDisliked, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MostDisliked)
     </div>
 
     <div class="form-group">
         <label for="MostLikedToSee">What would you most like to see?</label>
         @Html.TextBoxFor(m => m.MostLikeToSee, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MostLikeToSee)
     </div>
 
 
